@@ -12,7 +12,7 @@ Ce dépôt contient deux templates HTML pour des pages de destination GoPhish :
 Ces templates peuvent être utilisés pour évaluer la sensibilisation à la sécurité et la réaction des utilisateurs face aux tentatives de phishing.
 
 
-![Connexion M365](https://github.com/PassAndSecure/Template_Gophish/blob/main/Picture/Connexion_M365.PNG)
+![Connexion M365](https://github.com/PassAndSecure/Template_Gophish/blob/main/Picture/Connexion_M365-1.PNG)
 
 ## Contenu du Dépôt
 
