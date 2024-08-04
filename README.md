@@ -11,6 +11,9 @@ Ce dépôt contient deux templates HTML pour des pages de destination GoPhish :
 
 Ces templates peuvent être utilisés pour évaluer la sensibilisation à la sécurité et la réaction des utilisateurs face aux tentatives de phishing.
 
+
+![Connexion M365](https://github.com/PassAndSecure/Template_Gophish/blob/main/Picture/Connexion_M365.PNG)
+
 ## Contenu du Dépôt
 
 - `mslogin.html` : Template HTML pour une fausse page de connexion Microsoft.
