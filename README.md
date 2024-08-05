@@ -4,7 +4,7 @@ Ces templates de pages de destination sont conçus pour être utilisés avec [Go
 
 ## À propos
 
-Ce dépôt contient deux templates HTML en différentes langues pour des pages de destination GoPhish et un script de conversion de CSV M365-Gophish:
+Ce dépôt contient deux templates HTML en [différentes langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) pour des pages de destination GoPhish et un script de conversion de CSV M365-Gophish:
 
 - **mslogin.html** : Une page de connexion Microsoft 365 simulée.
 - **msmail.html** : Un email de vérification de connexion Microsoft 365 simulé.
