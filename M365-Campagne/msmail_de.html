@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Überprüfen Sie Ihre Verbindung zu Microsoft 365</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #2c2d35;
+            color:white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #654AE7;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-body a {
+            text-decoration: none;
+        }
+        .email-footer {
+            margin-top: 20px;
+            padding: 5px;
+            font-size: 12px;
+            color: #888888;
+            background-color: #302F2F;
+            text-align: left;
+        }
+        .email-footer a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            Überprüfen Sie Ihre Verbindung zu Microsoft 365
+        </div>
+        <div class="email-body">
+            <p>Guten Tag {{.FirstName}} {{.LastName}},</p>
+            <p>Sie sind der Eigentümer des Kontos {{.Email}} .</p>
+            <p>Wir haben einen Hinweis auf betrügerische Aktivitäten bei diesem Konto erhalten. Um Ihre Sicherheit zu gewährleisten, bitten wir Sie, sich <a href="{{.URL}}">umgehend erneut anzumelden</a>.<br><br> Wenn Microsoft Defender eine Anomalie erkennt, werden Sie aufgefordert, Ihr Passwort zu ändern.</p>
+            <p>Mit freundlichen Grüßen,</p>
+            <p>Microsoft Defender - Kontosicherheit</p>
+        </div>
+        <div class="email-footer">
+            <p style="margin-top: 10px; margin-left: 10px;"><a href="https://outlook.office365.com/owa/ReactionDigestMailUnsubscribe.aspx" style="color: #969696;">Abbestellen</a> • <a href="https://go.microsoft.com/fwlink/?LinkId=512132" style="color: #969696;">Datenschutzerklärung</a><br>
+            Microsoft Corporation, One Microsoft Way, Redmond, WA 98052</p>
+        </div>
+    </div>
+    <img src="{{.TrackingURL}}" alt="Tracker" style="display:none;">
+</body>
+</html>
+
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->    
