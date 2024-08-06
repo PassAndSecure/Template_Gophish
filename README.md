@@ -1,10 +1,10 @@
-# GoPhish Landing Page Templates
+# Gophish Landing Page Templates
 
-Ces templates de pages de destination sont conçus pour être utilisés avec [GoPhish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les deux templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft.
+Ces templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les deux templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft.
 
 ## À propos
 
-Ce dépôt contient deux templates HTML en [différentes langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) pour des pages de destination GoPhish et un script de conversion de CSV M365-Gophish:
+Ce dépôt contient deux templates HTML en [différentes langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) pour des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
 
 - **mslogin.html** : Une page de connexion Microsoft 365 simulée.
 - **msmail.html** : Un email de vérification de connexion Microsoft 365 simulé.
@@ -16,7 +16,7 @@ Ces templates peuvent être utilisés pour évaluer la sensibilisation à la sé
 
 ## Utilisation
 
-1. Ouvrez GoPhish et allez dans la section "Landing Pages".
+1. Ouvrez Gophish et allez dans la section "Landing Pages".
 2. Créez une nouvelle page de destination et copiez le contenu du fichier `mslogin.html` dans l'éditeur.
 3. Allez dans la section "Email Templates"
 4. Créez une nouvelle page de destination et copiez le contenu du fichier `msmail.html`  dans l'éditeur.
@@ -34,4 +34,4 @@ Nous accueillons avec plaisir les contributions de la communauté. Si vous souha
 
 Pour toute question ou problème concernant ces templates, veuillez ouvrir un issue dans ce dépôt. Nous essayerons de vous aider dans les meilleurs délais.
 
-Merci de votre intérêt et de votre participation à la communauté GoPhish !
+Merci de votre intérêt et de votre participation à la communauté Gophish !
