@@ -1,0 +1,171 @@
+<!-- 
+आपको इस टेम्पलेट का उपयोग करने से पहले कुछ संशोधन करने होंगे:
+(तत्वों को आसानी से खोजने के लिए ctrl + f कुंजी दबाएं)
+0. अपनी ग्राफिक चार्ट के अनुसार ईमेल-हेडर का बैकग्राउंड-कलर बदलें
+1. आइकन का href बदलें
+2. alt="Logo rogné" छवि का href बदलें
+3. अपनी टिकटिंग पेज का href बदलें
+4. no-reply-securite@votre_suffixe_upn_piege को बदलें
+5. no-reply-securite@votre_suffixe_upn को बदलें
+6. http://votre_url_piege/?rid= लिंक को बदलें
+7. LOGO शब्द को अपनी कंपनी के नाम से बदलें
+8. alt="Logo" का src बदलें
+-->
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="votre_logo"/>
+    <title>फिशिंग निवारक अभियान</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .email-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #2b579a;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9em;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signature p {
+            margin: 0;
+            margin-left:20px;
+            color: #2b579a;
+        }
+
+        .custom-img-1, .custom-img-2, .profil-pic {
+            max-width: 100%;
+            height: auto;
+        }
+        .custom-img-1 {
+            max-width: 65px;
+            margin-right:35px;
+        }
+        .custom-img-2 {
+            max-width: 220px;
+            margin-right:20px;
+        }
+        .profil-pic {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .signature {
+                flex-direction: column;
+                text-align: center;
+            }
+            .signature img {
+                margin: 10px 0;
+            }
+            .signature p {
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 576px) {
+    .login-container {
+        padding: 10px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .footer-links {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2> <img src="" class="img-fluid custom-img-1 profil-pic" alt="Logo rogné">फिशिंग निवारक अभियान</h2>
+        </div>
+        <div class="email-body">
+            <p>नमस्ते {{.FirstName}} {{.LastName}},</p>
+            
+            <p>हम आपको सूचित करना चाहते हैं कि <b style="color:red;">आपके पहचान पत्र समझौता किया गया है</b> हमारी हालिया फिशिंग अभियान के दौरान। आपके लिए सौभाग्य की बात है कि यह अभियान <b style="color:green;">निवारक उद्देश्य</b> के लिए था।</p>
+            
+            <p>हम आपसे अनुरोध करते हैं कि आप <b>{{.Email}}</b> के लिए अपने पासवर्ड को तुरंत रीसेट करें या अपने व्यवस्थापक से <a href="" target="_blank" rel="noopener"><b>टिकट के माध्यम से</b></a> संपर्क करें।</p>
+            
+            <p>यहां कुछ चीजें हैं जिन्हें आपको क्लिक करने से पहले जांचना चाहिए था:</p>
+            <ul>
+                <li><strong>मेल की उत्पत्ति:</strong> विषय और ईमेल पते की जांच करें। यहां, पता था <b style="color:red;">no-reply-securite@votre_suffixe_upn_piege</b> और नहीं <b style="color:green;">no-reply-securite@votre_suffixe_upn</b>।</li>
+                <li><strong>मेल का दृश्य:</strong> भले ही मेल प्रामाणिक लग रहा हो, जांचें कि क्या कोई स्पष्ट त्रुटियाँ हैं। इस मामले में, कोई त्रुटि नहीं थी।</li>
+                <li><strong>लिंक की रचना:</strong> लिंक पर <b>राइट क्लिक</b> करें, <b>"लिंक कॉपी करें"</b>, और <b>इसे</b> नोटपैड में पेस्ट करें। यहां, लिंक एक जाल साइट की ओर संकेत कर रहा था: <b style="color:red;">http://votre_url_piege/?rid=</b>, जो वैध नहीं था।</li>
+            </ul>
+            <p>साइट पर पहुँचने पर, कई चीजें जांचनी चाहिए:</p>
+            <ul>
+                <li><strong>अवैध URL:</strong> <b style="color:red;">http://votre_url_piege/?rid=</b>।</li>
+                <li><strong>दृश्य:</strong> यह पूरी तरह से आधिकारिक के समान नहीं था।</li>
+                <li><strong>पासवर्ड का प्रवेश:</strong> यह केवल तब दिखता है जब आपने सही ईमेल पता डालकर "अगला" पर क्लिक किया हो असली Microsoft लॉगिन पेज पर।</li>
+                <li><strong>लोगो:</strong> <b style="color:green;">"LOGO"</b> पासवर्ड पेज पर दिखाई देता था।</li>
+                <li><strong>पेज पर मौजूद लिंक की पुनर्निर्देशितियाँ:</strong> इस मामले में वैध होते हुए भी, हमेशा जांचें।</li>
+            </ul>
+            <p><b style="color: red;">आप फंस गए</b> क्योंकि आपने अपने <b style="color: black;">पहचान पत्र</b> दर्ज करने के बाद "अगला" पर क्लिक करके आपको <b style="color: green;">असली Microsoft लॉगिन पेज</b> पर पुनर्निर्देशित कर दिया गया। उस समय, या तो आपने इसे एक <b style="color: black;">"बग"</b> माना या आपने अपने <b style="color: black;">M365</b> खाते में प्रवेश किया अपने <b style="color: red;">सत्र कुकीज़</b> के कारण। यह एक बड़ा जाल है क्योंकि आपको कुछ भी महसूस नहीं हुआ।</p>
+            <p>जो लोग <b style="color: black;">MFA (मल्टी-फैक्टर प्रमाणीकरण)</b> का उपयोग कर रहे हैं, उन्हें यह सक्रिय हो सकता था यदि आपने <b style="color: green;">असली Microsoft लॉगिन पेज</b> के साथ लॉग इन किया होता। यह एक अतिरिक्त संकेतक है जिसे जांचना चाहिए।</p>
+            <p><b style="color: red;">सावधान</b> रहें और इन <b style="color: green;">अच्छे अभ्यासों</b> को लागू करें ताकि आप भविष्य में जाल में न फंसें।</p>
+            <p>सादर,</p>
+        
+        </div>
+        <div class="email-footer">
+            <div class="signature">
+                <div>
+                <p>आपका प्रथम नाम<br>आपका अंतिम नाम</p>
+                <p style="margin-top:5px;">आपका पद</p>
+                </div>
+                <p style="text-align: center; margin-right:10px; color: black;">यह संदेश आपके<br> सूचना प्रौद्योगिकी विभाग की ओर से निवारक उद्देश्य<br> के लिए था। आप हमारी<br> प्रत्येक आधिकारिक संचार में<br> हमारे लोगो को पाएंगे।</p>
+                <img src="" class="img-fluid custom-img-2" alt="Logo ">
+            </div>
+    </div>
+    </div>
+<img src="{{.TrackingURL}}" alt="Tracker" style="display:none;">
+</body>
+</html>
+
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->  
