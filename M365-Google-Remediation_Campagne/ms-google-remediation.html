@@ -65,13 +65,18 @@ Vous devrez procéder à quelques modification avant d'utiliser ce template :
             max-width: 220px;
             margin-right:20px;
         }
-        
+        .profil-pic {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
     <div class="email-container">
         <div class="email-header">
-            <h2> <img src="" class="img-fluid custom-img-1" alt="Logo rogné">Campagne de Phishing Préventive</h2>
+            <h2> <img src="" class="img-fluid custom-img-1 profil-pic" alt="Logo rogné">Campagne de Phishing Préventive</h2>
         </div>
         <div class="email-body">
             <p>Bonjour {{.FirstName}} {{.LastName}},</p>
