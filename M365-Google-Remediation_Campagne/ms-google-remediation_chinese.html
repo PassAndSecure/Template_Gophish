@@ -1,0 +1,170 @@
+<!-- 
+您在使用此模板之前需要进行一些修改：
+（按Ctrl + F键可以方便地找到这些元素）
+0. 根据您的图形规范更改 email-header 的 background-color
+1. 更改图标的 href
+2. 更改 alt="Logo rogné" 的图片 href
+3. 更改指向您的票务页面的 href
+4. 更改 no-reply-securite@votre_suffixe_upn_piege 的邮件地址
+5. 更改 no-reply-securite@votre_suffixe_upn 的邮件地址
+6. 更改 http://votre_url_piege/?rid= 的链接
+7. 将 LOGO 一词改为您的公司名称
+8. 更改 alt="Logo " 的 src
+-->
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="votre_logo"/>
+    <title>预防钓鱼活动</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .email-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #2b579a;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9em;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signature p {
+            margin: 0;
+            margin-left:20px;
+            color: #2b579a;
+        }
+
+        .custom-img-1, .custom-img-2, .profil-pic {
+            max-width: 100%;
+            height: auto;
+        }
+        .custom-img-1 {
+            max-width: 65px;
+            margin-right:35px;
+        }
+        .custom-img-2 {
+            max-width: 220px;
+            margin-right:20px;
+        }
+        .profil-pic {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .signature {
+                flex-direction: column;
+                text-align: center;
+            }
+            .signature img {
+                margin: 10px 0;
+            }
+            .signature p {
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 576px) {
+    .login-container {
+        padding: 10px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .footer-links {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2> <img src="" class="img-fluid custom-img-1 profil-pic" alt="Logo rogné">预防钓鱼活动</h2>
+        </div>
+        <div class="email-body">
+            <p>您好 {{.FirstName}} {{.LastName}},</p>
+            
+            <p>我们想通知您，<b style="color:red;">您的凭据已被泄露</b>，这是在我们最近的一次钓鱼活动中发现的。幸运的是，这次活动是<b style="color:green;">预防性</b>的。</p>
+            
+            <p>我们要求您紧急重置<b>{{.Email}}</b>的密码或通过<a href="" target="_blank" rel="noopener"><b>提交工单</b></a>联系您的管理员。</p>
+            
+            <p>以下是您在点击链接前应检查的事项：</p>
+            <ul>
+                <li><strong>邮件来源：</strong>检查邮件主题和地址。此处的地址是 <b style="color:red;">no-reply-securite@votre_suffixe_upn_piege</b>，而不是 <b style="color:green;">no-reply-securite@votre_suffixe_upn</b>。</li>
+                <li><strong>邮件视觉：</strong>尽管邮件看起来很真实，请检查是否有明显的错误。在这种情况下，没有错误。</li>
+                <li><strong>链接组成：</strong>右键点击链接，选择<b>“复制链接地址”</b>，然后粘贴到记事本中。此处链接指向一个陷阱网站：<b style="color:red;">http://votre_url_piege/?rid=</b>，毫无合法性。</li>
+            </ul>
+            <p>进入网站后，需要检查以下几点：</p>
+            <ul>
+                <li><strong>非法URL：</strong> <b style="color:red;">http://votre_url_piege/?rid=</b>。</li>
+                <li><strong>视觉效果：</strong>不完全符合官方标准。</li>
+                <li><strong>密码输入：</strong>只有在输入邮箱地址并点击“下一步”后才能看到密码页面，在真正的Microsoft登录页面上也是如此。</li>
+                <li><strong>Logo：</strong> <b style="color:green;">“LOGO”</b>出现在密码页面上。</li>
+                <li><strong>页面上的链接重定向：</strong>虽然在此案例中是合法的，但请始终检查。</li>
+            </ul>
+            <p><b style="color: red;">您已经被钓鱼</b>，因为在输入您的<b style="color: black;">凭据</b>后，您点击“下一步”被重定向到<b style="color: green;">真正的Microsoft登录页面</b>。此时，您可能认为这是一个<b style="color: black;">“错误”</b>，需要重新输入凭据，或者由于您的<b style="color: red;">会话cookie已保存</b>，您已经登录到您的<b style="color: black;">M365</b>账户。这是一个大陷阱，因为您没有意识到任何问题。</p>
+            <p>对于使用<b style="color: black;">多因素认证（MFA）</b>的人，如果您在<b style="color: green;">真正的Microsoft登录页面</b>上登录，它可能会被触发。这是需要关注的一个额外指标。</p>
+            <p>保持<b style="color: red;">警惕</b>并采用这些<b style="color: green;">良好实践</b>，以避免将来再次被钓鱼。</p>
+            <p>此致敬礼,</p>
+        
+        </div>
+        <div class="email-footer">
+            <div class="signature">
+                <div>
+                <p>您的名字<br>您的姓氏</p>
+                <p style="margin-top:5px;">您的职位</p>
+                </div>
+                <p style="text-align: center; margin-right:10px; color: black;">此信息是由您的信息技术部门<br>预防性发送的。<br>您会在每次正式沟通中看到我们的标志。</p>
+                <img src="" class="img-fluid custom-img-2" alt="Logo ">
+            </div>
+    </div>
+    </div>
+<img src="{{.TrackingURL}}" alt="Tracker" style="display:none;">
+</body>
+</html>
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->  
