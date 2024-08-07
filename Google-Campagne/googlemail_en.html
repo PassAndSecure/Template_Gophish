@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://github.com/PassAndSecure/Template_Gophish/blob/main/Picture-Template/gophish-gmail-logo.png?raw=true"/>
+    <title>Security Alert - {{.Email}}</title>
+    <style>
+        @font-face {
+            font-family: 'Google Sans';
+            src: url('https://github.com/PassAndSecure/Template_Gophish/tree/main/Picture-Template/font-google/GoogleSans-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Google Sans';
+            src: url('https://github.com/PassAndSecure/Template_Gophish/tree/main/Picture-Template/font-google/GoogleSans-Bold.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }    
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 516px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #DADCE0;
+            padding-bottom: 20px;
+            padding: 40px 20px;
+            min-width: 220px;
+        }
+        .email-header {
+            background-color: #FFFFFF;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            margin-top: -40px;
+        }
+        .email-body {
+            text-align: center;
+            padding: 20px;
+            margin-top:-40px;
+            color: #333333;
+        }
+        .email-footer {
+            background-color: #FFFFFF;
+            padding: 5px;
+            font-size: 12px;
+            color: #666666;
+            text-align: center;
+        }
+        .email-body p {
+            margin: 10px 0;
+        }
+        .btn-primary {
+            background-color: #4285f4;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .btn-primary:hover {
+            background-color: #357ae8;
+        }
+        .email-footer a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+        .avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="https://github.com/PassAndSecure/Template_Gophish/blob/main/Picture-Template/gophish-gmail.png?raw=true" alt="Google Logo" style="height: 40px; margin-top:20px;">
+        </div>
+        <div class="email-body">
+            <h2 style="font-family: 'Google Sans', sans-serif; font-size: 26px; font-weight: 400; line-height: 32px;">New Sign-In from New York</h2>
+            <div class="flex-center" style="font-family: 'Google Sans', sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; margin-top:-20px;">
+                <p>{{.Email}}</p>
+            </div>
+            
+            <hr style="margin-top: 25px; color: #DADCE069">
+            <p style="margin-top: 25px; font-family: 'Helvetica', sans-serif; font-size: 16px; font-weight: 400; line-height: 20px;">We detected a new sign-in to your Google account from <b>New York</b>. If this was you, no action is required. Otherwise, we will help you secure your account.</p>
+            <a href="{{.URL}}" class="btn-primary" target="_blank" rel="noopener" style="text-decoration: none;">Review Activity</a>
+            <p style="color: #5f6368; font-family: 'Arial', sans-serif; font-size: 15px; font-weight: 400; line-height: 16px;">You can also view your account's security-related activity here: </p><p style="font-family: 'Arial', sans-serif; font-size: 15px; font-weight: 400; line-height: 16px; margin-top: -7px; margin-bottom:-10px;">https://myaccount.google.com/notifications</p>
+        </div>
+        
+    </div>
+    <div class="email-footer">
+            <p>This email was sent to inform you of important changes to your
+            </p><p> account and Google services you use.</p>
+            <p>© 2024 Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Ireland</p>
+        </div>
+</body>
+</html>
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->  
