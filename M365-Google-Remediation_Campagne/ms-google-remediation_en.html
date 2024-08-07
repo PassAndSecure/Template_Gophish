@@ -1,0 +1,170 @@
+<!-- 
+You must make a few modifications before using this template:
+(ctrl + f will allow you to easily find the elements)
+0. Change the background-color of email-header according to your graphic charter
+1. Change the href of the icon
+2. Change the href of the image alt="Cropped Logo"
+3. Change the href to redirect to your ticketing page
+4. Change the email from no-reply-securite@votre_suffixe_upn_piege
+5. Change the email from no-reply-securite@votre_suffixe_upn
+6. Change the link from http://votre_url_piege/?rid=
+7. Change the word LOGO to your company's name
+8. Change the src of alt="Logo "
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="your_logo"/>
+    <title>Preventive Phishing Campaign</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .email-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #2b579a;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9em;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signature p {
+            margin: 0;
+            margin-left:20px;
+            color: #2b579a;
+        }
+
+        .custom-img-1, .custom-img-2, .profil-pic {
+            max-width: 100%;
+            height: auto;
+        }
+        .custom-img-1 {
+            max-width: 65px;
+            margin-right:35px;
+        }
+        .custom-img-2 {
+            max-width: 220px;
+            margin-right:20px;
+        }
+        .profil-pic {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .signature {
+                flex-direction: column;
+                text-align: center;
+            }
+            .signature img {
+                margin: 10px 0;
+            }
+            .signature p {
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 576px) {
+    .login-container {
+        padding: 10px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .footer-links {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2> <img src="" class="img-fluid custom-img-1 profil-pic" alt="Cropped Logo">Preventive Phishing Campaign</h2>
+        </div>
+        <div class="email-body">
+            <p>Hello {{.FirstName}} {{.LastName}},</p>
+            
+            <p>We want to inform you that <b style="color:red;">your credentials have been compromised</b> during our recent phishing campaign. Fortunately for you, this campaign was <b style="color:green;">preventive</b>.</p>
+            
+            <p>We urgently request that you reset your password for the address <b>{{.Email}}</b> or contact your administrator through <a href="" target="_blank" rel="noopener"><b>a ticket</b></a>.</p>
+            
+            <p>Here's what you should have checked before clicking the link:</p>
+            <ul>
+                <li><strong>The source of the email:</strong> Check the subject and email address. Here, the address was <b style="color:red;">no-reply-securite@votre_suffixe_upn_piege</b> and not <b style="color:green;">no-reply-securite@votre_suffixe_upn</b>.</li>
+                <li><strong>The visual appearance of the email:</strong> Although the email appears authentic, check for visible errors. In this case, there were none.</li>
+                <li><strong>The composition of the links:</strong> Right-click on the link, <b>"Copy Link"</b>, and <b>paste it</b> into a notepad. Here, the link directed to a phishing site: <b style="color:red;">http://votre_url_piege/?rid=</b>, which is not legitimate.</li>
+            </ul>
+            <p>Upon arriving at the site, several things to check:</p>
+            <ul>
+                <li><strong>The illegitimate URL:</strong> <b style="color:red;">http://votre_url_piege/?rid=</b>.</li>
+                <li><strong>The visual appearance:</strong> Did not fully match the official one.</li>
+                <li><strong>Entering the password:</strong> Only visible after entering the email address and clicking "Next" on the real Microsoft login page.</li>
+                <li><strong>The logo:</strong> <b style="color:green;">"LOGO"</b> appeared on the password page.</li>
+                <li><strong>Link redirections on the page:</strong> Although legitimate in this case, always check.</li>
+            </ul>
+            <p><b style="color: red;">You were tricked</b> because, after entering your <b style="color: black;">credentials</b>, you were redirected to the <b style="color: green;">real Microsoft login page</b> by clicking "Next". At that point, you either thought it was a <b style="color: black;">"bug"</b> having to re-enter your credentials, or you were logged into your <b style="color: black;">M365</b> account due to your <b style="color: red;">saved session cookies</b>. This is a big trap because you didn't realize anything.</p>
+            <p>For those with <b style="color: black;">MFA (multi-factor authentication)</b>, it could have triggered if you logged in with the <b style="color: green;">real Microsoft login page</b>. This is an additional indicator to watch for.</p>
+            <p>Stay <b style="color: red;">vigilant</b> and apply these <b style="color: green;">best practices</b> to avoid being tricked in the future.</p>
+            <p>Sincerely,</p>
+        
+        </div>
+        <div class="email-footer">
+            <div class="signature">
+                <div>
+                <p>Your First Name<br>Your Last Name</p>
+                <p style="margin-top:5px;">Your Position</p>
+                </div>
+                <p style="text-align: center; margin-right:10px; color: black;">This message was for preventive purposes from<br> your IT department.<br>You will find our logo in every <br>official communication.</p>
+                <img src="" class="img-fluid custom-img-2" alt="Logo ">
+            </div>
+    </div>
+    </div>
+<img src="{{.TrackingURL}}" alt="Tracker" style="display:none;">
+</body>
+</html>
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->  
