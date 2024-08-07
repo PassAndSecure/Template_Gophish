@@ -1,0 +1,170 @@
+<!-- 
+يجب عليك إجراء بعض التعديلات قبل استخدام هذا القالب:
+(سيساعدك الضغط على Ctrl + F في العثور بسهولة على العناصر)
+0. تغيير لون خلفية email-header وفقًا لميثاق الألوان الخاص بك
+1. تغيير href لأيقونة
+2. تغيير href لصورة alt="Logo rogné"
+3. تغيير href لإعادة التوجيه إلى صفحة التذاكر الخاصة بك
+4. تغيير البريد الإلكتروني no-reply-securite@votre_suffixe_upn_piege
+5. تغيير البريد الإلكتروني no-reply-securite@votre_suffixe_upn
+6. تغيير الرابط http://votre_url_piege/?rid=
+7. تغيير كلمة LOGO باسم شركتك
+8. تغيير src لـ alt="Logo "
+-->
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="votre_logo"/>
+    <title>حملة تصيد وقائية</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .email-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #2b579a;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9em;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signature p {
+            margin: 0;
+            margin-left:20px;
+            color: #2b579a;
+        }
+
+        .custom-img-1, .custom-img-2, .profil-pic {
+            max-width: 100%;
+            height: auto;
+        }
+        .custom-img-1 {
+            max-width: 65px;
+            margin-right:35px;
+        }
+        .custom-img-2 {
+            max-width: 220px;
+            margin-right:20px;
+        }
+        .profil-pic {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .signature {
+                flex-direction: column;
+                text-align: center;
+            }
+            .signature img {
+                margin: 10px 0;
+            }
+            .signature p {
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 576px) {
+    .login-container {
+        padding: 10px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .footer-links {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2> <img src="" class="img-fluid custom-img-1 profil-pic" alt="Logo rogné">حملة تصيد وقائية</h2>
+        </div>
+        <div class="email-body">
+            <p>مرحباً {{.FirstName}} {{.LastName}},</p>
+            
+            <p>نود إبلاغك بأن <b style="color:red;">تم اختراق بيانات اعتمادك</b> خلال حملتنا الأخيرة للتصيد. لحسن حظك، كانت هذه الحملة <b style="color:green;">للأغراض الوقائية</b>.</p>
+            
+            <p>نطلب منك إعادة تعيين كلمة المرور الخاصة بك بشكل عاجل للبريد الإلكتروني <b>{{.Email}}</b> أو الاتصال بالمسؤول الخاص بك عبر <a href="" target="_blank" rel="noopener"><b>تذكرة</b></a>.</p>
+            
+            <p>إليك ما كان يجب عليك التحقق منه قبل النقر على الرابط:</p>
+            <ul>
+                <li><strong>مصدر البريد الإلكتروني:</strong> تحقق من الموضوع والبريد الإلكتروني. هنا، كان العنوان <b style="color:red;">no-reply-securite@votre_suffixe_upn_piege</b> وليس <b style="color:green;">no-reply-securite@votre_suffixe_upn</b>.</li>
+                <li><strong>المرئي للبريد الإلكتروني:</strong> بالرغم من أن البريد يبدو أصيلاً، تحقق من وجود أخطاء واضحة. في هذه الحالة، لم يكن هناك أي أخطاء.</li>
+                <li><strong>تكوين الروابط:</strong> انقر بزر الفأرة الأيمن على الرابط، <b>"نسخ الرابط"</b>، و<b>لصقه</b> في المفكرة. هنا، الرابط كان يقود إلى موقع تصيد: <b style="color:red;">http://votre_url_piege/?rid=</b>، والذي ليس له أي شرعية.</li>
+            </ul>
+            <p>عند الوصول إلى الموقع، هناك عدة أشياء يجب التحقق منها:</p>
+            <ul>
+                <li><strong>الرابط غير الشرعي:</strong> <b style="color:red;">http://votre_url_piege/?rid=</b>.</li>
+                <li><strong>المرئي:</strong> لم يكن مطابقاً تماماً للأصلي.</li>
+                <li><strong>إدخال كلمة المرور:</strong> يمكن رؤيتها فقط بعد إدخال عنوان البريد الإلكتروني والنقر على "التالي" في صفحة تسجيل الدخول الحقيقية لمايكروسوفت.</li>
+                <li><strong>الشعار:</strong> <b style="color:green;">"LOGO"</b> كان يظهر في صفحة كلمة المرور.</li>
+                <li><strong>إعادة توجيه الروابط الموجودة على الصفحة:</strong> بالرغم من كونها شرعية في هذه الحالة، تحقق دائماً.</li>
+            </ul>
+            <p><b style="color: red;">لقد وقعت في الفخ</b> لأنك بعد إدخال <b style="color: black;">بيانات الاعتماد</b> الخاصة بك، تمت إعادة توجيهك إلى <b style="color: green;">صفحة تسجيل الدخول الحقيقية لمايكروسوفت</b> بالنقر على "التالي". في هذه اللحظة، إما أنك اعتقدت بوجود <b style="color: black;">"خطأ"</b> عند الحاجة لإعادة إدخال بيانات الاعتماد الخاصة بك، أو أنك تم تسجيل دخولك إلى حسابك <b style="color: black;">M365</b> بسبب <b style="color: red;">ملفات تعريف الارتباط الخاصة بجلسة تسجيل الدخول المحفوظة</b>. هذا فخ كبير لأنك لم تلاحظ أي شيء.</p>
+            <p>بالنسبة للأشخاص الذين لديهم <b style="color: black;">MFA (المصادقة متعددة العوامل)</b>، كان يمكن تفعيلها إذا كنت قد سجلت الدخول باستخدام <b style="color: green;">صفحة تسجيل الدخول الحقيقية لمايكروسوفت</b>. هذه إشارة إضافية يجب مراقبتها.</p>
+            <p>كن <b style="color: red;">حذراً</b> واتباع هذه <b style="color: green;">الممارسات الجيدة</b> لتجنب الوقوع في الفخ في المستقبل.</p>
+            <p>مع التحية،</p>
+        
+        </div>
+        <div class="email-footer">
+            <div class="signature">
+                <div>
+                <p>اسمك الأول<br>اسمك الأخير</p>
+                <p style="margin-top:5px;">وظيفتك</p>
+                </div>
+                <p style="text-align: center; margin-right:10px; color: black;">كانت هذه الرسالة لغرض الوقاية من<br> قسم تكنولوجيا المعلومات الخاص بك.<br>ستجد شعارنا في كل<br> الاتصال الرسمي.</p>
+                <img src="" class="img-fluid custom-img-2" alt="Logo ">
+            </div>
+    </div>
+    </div>
+<img src="{{.TrackingURL}}" alt="Tracker" style="display:none;">
+</body>
+</html>
+<!------.-. .-')         (`-.    _  .-')   
+        \  ( OO )      _(OO  )_ ( \( -O )  
+        ,--. ,--.  ,--(_/   ,. \ ,------.  
+        |  .'   /  \   \   /(__/ |   /`. ' 
+        |      /,   \   \ /   /  |  /  | | 
+        |     ' _)   \   '   /,  |  |_.' | 
+        |  .   \      \     /__) |  .  '.' 
+        |  |\   \      \   /     |  |\  \  
+        `--' '--'       `-'      `--' '--'------->  
