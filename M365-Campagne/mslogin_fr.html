@@ -165,6 +165,27 @@
             display: flex;
             justify-content: flex-end;
         }
+        @media (max-width: 576px) {
+    .login-container {
+        padding: 10px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .footer-links {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
     </style>
     <script>
         function validateForm() {
