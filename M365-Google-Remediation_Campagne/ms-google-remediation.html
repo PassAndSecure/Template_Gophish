@@ -58,6 +58,11 @@ Vous devrez procéder à quelques modification avant d'utiliser ce template :
             margin-left:20px;
             color: #2b579a;
         }
+
+        .custom-img-1, .custom-img-2, .profil-pic {
+            max-width: 100%;
+            height: auto;
+        }
         .custom-img-1 {
             max-width: 65px;
             margin-right:35px;
@@ -71,6 +76,18 @@ Vous devrez procéder à quelques modification avant d'utiliser ce template :
             height: 65px;
             border-radius: 50%;
             object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .signature {
+                flex-direction: column;
+                text-align: center;
+            }
+            .signature img {
+                margin: 10px 0;
+            }
+            .signature p {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
