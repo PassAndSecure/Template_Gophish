@@ -29,6 +29,8 @@ Ces templates peuvent être utilisés pour évaluer la sensibilisation à la sé
 
 ## Avertissement
 
+Le téléchargement et l'utilisation des ressources ne sont pas garantis par le site Pass And Secure. Le site et ses créateurs ne sont pas responsables des problèmes ou des dommages qui pourraient survenir suite à l'utilisation de ces ressources. Nous fournissons ces ressources sans garantie d'aucune sorte ; utilisez-les à vos propres risques.
+
 L'utilisation de ces templates doit être effectuée de manière éthique et légale, conformément aux politiques de votre organisation et aux lois locales. Assurez-vous d'obtenir les autorisations nécessaires avant de lancer des campagnes de phishing.
 
 ## Contribution
