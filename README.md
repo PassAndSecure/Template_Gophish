@@ -1,16 +1,17 @@
 # Gophish Landing Page Templates
 
-Ces templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les deux templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft.
+Ces templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les 5 templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
 
 ## À propos
 
-Ce dépôt contient 4 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
+Ce dépôt contient 5 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
 
 - **mslogin.html** : Une page de connexion Microsoft 365 simulée.
 - **msmail.html** : Un email de vérification de connexion Microsoft 365 simulé.
 - **Conversion_CSV_Gophish_M365.ps1** : Un script de conversion CSV passant d'un export utilisateur M365 au format CSV attendu par Gophish
 - **googlelogin.html** : Une page de connexion Google simulée.
 - **googlemail.html** : Un email de vérification de connexion Google simulé.
+- **ms-google-remediation.html** : Un email de remédiation d'après campagne pour sensibilisé vos utilisateurs. (Compatible M365 - Google)
 
 Ces templates peuvent être utilisés pour évaluer la sensibilisation à la sécurité et la réaction des utilisateurs face aux tentatives de phishing.
 
