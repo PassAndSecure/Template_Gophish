@@ -1,6 +1,6 @@
 # Gophish Landing Page Templates
 
-Lien du tutoriel associé : [https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
+Lien du tutoriel associé : [Installation et déploiement de Gophish avec un tenant M365 compatible Debian 12 / AlmaLinux 9.4](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
 
 Ces templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les 5 templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
 
