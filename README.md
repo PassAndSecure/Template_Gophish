@@ -2,6 +2,8 @@
 
 Ces templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les 5 templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
 
+Pour plus d'informations et d'autres outils de ethical hacking, visitez notre site web [PassAndSecure](https://passandsecure.fr).
+
 ## À propos
 
 Ce dépôt contient 5 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des emails (nocifs ou de remédiation), des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
