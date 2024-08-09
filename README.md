@@ -1,4 +1,4 @@
-# Gophish Landing Page Templates
+# Gophish Repository fr version by Kirua6 (Pass And Secure)
 
 Lien du tutoriel associé : [Installation et déploiement de Gophish avec un tenant M365 compatible Debian 12 / AlmaLinux 9.4](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
 
