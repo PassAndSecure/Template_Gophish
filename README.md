@@ -2,6 +2,8 @@
 
 Lien du tutoriel associé : [Installation et déploiement de Gophish avec un tenant M365 compatible Debian 12 / AlmaLinux 9.4](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
 
+Le [fork du code source](https://github.com/PassAndSecure/Template_Gophish/releases/download/gophish-v0.12.1-linux-64bit-fr/gophish-v0.12.1-linux-64bit-fr.zip) existant que j'ai développé est une version française de Gophish, avec quelques améliorations intégrées en plus de la francisation.
+
 Ces templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les 5 templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
 
 Pour plus d'informations et d'autres outils de ethical hacking, visitez notre site web [PassAndSecure](https://passandsecure.fr).
