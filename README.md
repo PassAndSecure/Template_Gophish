@@ -2,16 +2,17 @@
 
 Lien du tutoriel associé : [Installation et déploiement de Gophish avec un tenant M365 compatible Debian 12 / AlmaLinux 9.4](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
 
-Le [fork du code source](https://github.com/PassAndSecure/Template_Gophish/releases/download/gophish-v0.12.1-linux-64bit-fr/gophish-v0.12.1-linux-64bit-fr.zip) existant que j'ai développé est une version française de Gophish, avec quelques améliorations intégrées en plus de la francisation.
+Le [fork du code source](https://github.com/PassAndSecure/Template_Gophish/releases/download/gophish-v0.12.1-linux-64bit-fr/gophish-v0.12.1-linux-64bit-fr.zip) existant que j'ai développé est une version française de Gophish, avec quelques améliorations intégrées en plus de la francisation. [Gophish](https://getgophish.com/) est une plateforme open-source de phishing et de sensibilisation à la sécurité.
 
-Les templates de pages de destination sont conçus pour être utilisés avec [Gophish](https://getgophish.com/), une plateforme open-source de phishing et de sensibilisation à la sécurité. Les 5 templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
+Les templates fournis sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
 
 Pour plus d'informations et d'autres outils de ethical hacking, visitez notre site web [PassAndSecure](https://passandsecure.fr).
 
 ## À propos
 
-Ce dépôt contient 5 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des emails (nocifs ou de remédiation), des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
+Ce dépôt contient 1 fork de Gophish et 5 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des emails (nocifs ou de remédiation), des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
 
+- **gophish-v0.12.1-linux-64bit-fr** : Fork français de Gophish.
 - **mslogin.html** : Une page de connexion Microsoft 365 simulée.
 - **msmail.html** : Un email de vérification de connexion Microsoft 365 simulé.
 - **Conversion_CSV_Gophish_M365.ps1** : Un script de conversion CSV passant d'un export utilisateur M365 au format CSV attendu par Gophish
