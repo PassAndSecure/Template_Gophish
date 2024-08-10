@@ -1,9 +1,8 @@
 # Script de mise à jour de Gophish_fr
 # Ce script fonctionne aussi pour passer de la version officelle de Gophish à la Française du dépôt
-# wget https://github.com/PassAndSecure/Template_Gophish/blob/main/Mise_a_jour-Gophish_fr.sh
 
 # Installation 
-# wget https://github.com/PassAndSecure/Template_Gophish/blob/main/Mise_a_jour-Gophish_fr.sh
+# wget https://github.com/PassAndSecure/Template_Gophish/releases/download/Mise_a_jour-Gophish_fr/Mise_a_jour-Gophish_fr.sh
 # chmod +x Mise_a_jour-Gophish_fr.sh
 # ./Mise_a_jour-Gophish_fr.sh
 
