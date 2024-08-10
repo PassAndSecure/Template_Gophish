@@ -3,9 +3,9 @@
 
 # Installation 
 # cd /opt/gophish
-# wget https://github.com/PassAndSecure/Template_Gophish/releases/download/Mise_a_jour-Gophish_fr/Mise_a_jour-Gophish_fr.sh
-# chmod +x Mise_a_jour-Gophish_fr.sh
-# ./Mise_a_jour-Gophish_fr.sh
+# sudo wget https://github.com/PassAndSecure/Template_Gophish/releases/download/Mise_a_jour-Gophish_fr/Mise_a_jour-Gophish_fr.sh
+# sudo chmod +x Mise_a_jour-Gophish_fr.sh
+# sudo ./Mise_a_jour-Gophish_fr.sh
 
 cd /tmp 
 wget https://github.com/PassAndSecure/Template_Gophish/releases/download/gophish-v0.12.1-linux-64bit-fr/gophish-v0.12.1-linux-64bit-fr.zip
