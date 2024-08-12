@@ -10,10 +10,11 @@ Pour plus d'informations et d'autres outils de ethical hacking, visitez notre si
 
 ## À propos
 
-Ce dépôt contient 1 fork de Gophish et 5 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des emails (nocifs ou de remédiation), des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
+Ce dépôt contient 1 fork de Gophish et 6 templates HTML en [différentes](https://github.com/PassAndSecure/Template_Gophish/tree/main/M365-Campagne) [langues](https://github.com/PassAndSecure/Template_Gophish/tree/main/Google-Campagne) pour des emails (nocifs ou de remédiation), des pages de destination Gophish et un script de conversion de CSV M365-Gophish:
 
 - **gophish-v0.12.1-linux-64bit-fr** : Fork français de Gophish.
-- **mslogin.html** : Une page de connexion Microsoft 365 simulée.
+- **mslogin.html** : Une page de connexion Microsoft 365 simulée partiellement correspondante à l'officielle.
+- **mslogin_v2.html** : Une page de connexion Microsoft 365 simulée totalement correspondante à l'officielle.
 - **msmail.html** : Un email de vérification de connexion Microsoft 365 simulé.
 - **Conversion_CSV_Gophish_M365.ps1** : Un script de conversion CSV passant d'un export utilisateur M365 au format CSV attendu par Gophish
 - **googlelogin.html** : Une page de connexion Google simulée.
