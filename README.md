@@ -2,6 +2,8 @@
 
 # GophishFR Template Repository by Kirua6 (Pass And Secure)
 
+Docker Officiel : https://hub.docker.com/r/gophishfr/gophishfr
+
 Installation avec apt possible, GophishFR sera installé dans `/var/lib`, `/usr/share/`, `/lib/systemd/system/` et un utilisateur dédié `gophishfr` sera créé : 
 ```bash
 echo "deb [trusted=yes] https://passandsecure.github.io/GophishFR/repo stable main" | sudo tee /etc/apt/sources.list.d/gophishfr.list
